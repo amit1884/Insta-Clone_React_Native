@@ -4,12 +4,12 @@ import PostHeader from "./PostHeader";
 import PostBody from "./PostBody";
 import PostFooter from "./PostFooter";
 
-function SinglePost() {
+function SinglePost({data}) {
   return (
     <View style={styles.postContainer}>
       <View style={styles.postDetails}>
-        <PostHeader />
-        <PostBody/>
+        <PostHeader username={data?.username}/>
+        <PostBody img={data?.content}/>
         <PostFooter/>
       </View>
       <View style={styles.postLikes}></View>
